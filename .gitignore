@@ -1,2 +1,3 @@
 *.tmp
 .part
+.release-notes.md
