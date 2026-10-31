@@ -26,6 +26,7 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 ### ⚡ 性能与电源（左侧导航 ⚡）
 - **虚拟内存移到 D 盘**：把 pagefile.sys 从系统盘搬到数据盘，重启后生效，C 盘立刻多出几个 GB
+  （v1.2.1 起会先检测分页文件当前在哪个盘，已经不在系统盘就直接提示「不需要转移」）
 - **关闭睡眠**：睡眠 / 休眠超时全部设为「从不」，挂机下载、远程连接不再断
 - 两者都只改系统设置，随时能在 Windows 里改回来；搬移前会自动备份原设置
 
@@ -45,8 +46,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.0/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.0/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe> |
 
 单文件 EXE，不需要安装 Python 或运行库，拷贝到哪都能跑。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -74,6 +75,17 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v1.2.1（2026-10-31）
+- 修复：**「虚拟内存移到 D 盘」报错**。改为直接写注册表
+  `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PagingFiles`，
+  不再调用在 Win10 上会抛「常规故障」的 `Win32_PageFileSetting`；写完后自动复查，改不动会明确说明原因
+- 新增：搬移前先**检测虚拟内存当前所在磁盘**。已经不在系统盘时直接提示「不需要转移」并阻止操作，
+  免得把分页文件从一块数据盘倒腾到另一块、白占空间
+- 修复：右上角出现**两套**最小化 / 最大化 / 关闭按钮。窗口改为「先隐藏 → 装好无边框钩子并摘掉
+  `WS_CAPTION` → 再显示」，首帧就是无边框，不用刷新才正常
+- 优化：虚拟内存操作失败的提示不再一律叫「设置失败」，而是把具体原因直接说清楚
+- 产物：`系统清理_v1.2.1.exe`
 
 ### v1.2.0（2026-10-31）
 - 新增：**「性能与电源」独立成左侧导航页 ⚡**，虚拟内存 / 睡眠相关操作一站直达
