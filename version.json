@@ -1,9 +1,9 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "date": "2026-10-31",
-  "notes": "修复「转移虚拟内存」报错：改为直接写注册表 PagingFiles，不再依赖会报「常规故障」的 WMI 分页文件类；转移前先检测虚拟内存当前所在磁盘，已经不在系统盘时给出提示并阻止无意义的搬移；彻底修复右上角出现两套最小化/最大化/关闭按钮的问题（首帧即无边框，无需刷新）。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe",
-  "size": 17705055,
-  "sha256": "fabee85d6f4d688dc39076e91b57e35ea91c25b80711cb0f7bcdfd6a56c461e4"
+  "notes": "修复升级时不停弹出 ping 黑窗口、升完版本仍是旧版的问题：升级改为进程内直接替换（当前 EXE 改名 .old → 新文件写到原路径 → 启动新程序），0.1 秒完成，不再依赖批处理、不再弹窗等待。注意：v1.2.0 / v1.2.1 自带的升级器本身有缺陷，换不掉自己，如果你用的是这两个版本，请手动下载 v1.2.2 覆盖一次；从 v1.2.2 起自动升级恢复正常。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe",
+  "size": 17706937,
+  "sha256": "84bf2d1c4e19540d936d86f28136359ed4b84f87a80c69a637fac316bd18eb61"
 }

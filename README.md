@@ -46,8 +46,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe> |
 
 单文件 EXE，不需要安装 Python 或运行库，拷贝到哪都能跑。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -75,6 +75,18 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v1.2.2（2026-10-31）
+- 修复：**升级时不停弹出 ping 黑窗口、升完版本还是旧的**。旧升级方式写个 `.bat` 等程序退出再覆盖文件，
+  而 `DETACHED_PROCESS` 起的 cmd 没有控制台，里面每个 `ping` 都会各自弹一个黑窗口；
+  加上退出前还弹着模态提示框，程序迟迟不退，覆盖连续失败 25 次后放弃 —— 什么都没换成
+- 重构：升级改为**进程内直接替换**。Windows 只是不许删改正在运行的 EXE，**重命名是允许的**，
+  于是「当前 EXE 改名 `.old` → 新文件写到原路径 → 按版本号改名 → 启动新程序」，实测 **0.08 秒**完成，
+  不弹窗、不等待、不依赖批处理；`.old` 在下次启动时自动清理
+- 优化：升级失败会把具体原因（复制失败 / 启动失败 / 改名失败）直接显示出来，不再只说「升级失败」
+- ⚠️ **v1.2.0 / v1.2.1 自带的升级器本身是坏的**，它换不掉自己。用这两个版本的请手动下载 v1.2.2 覆盖一次；
+  从 v1.2.2 起自动升级恢复正常
+- 产物：`系统清理_v1.2.2.exe`
 
 ### v1.2.1（2026-10-31）
 - 修复：**「虚拟内存移到 D 盘」报错**。改为直接写注册表
