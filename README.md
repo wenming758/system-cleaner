@@ -45,7 +45,7 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/raw/master/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.0/SystemCleaner.exe> |
 | GitHub | <https://github.com/wenming758/system-cleaner/raw/main/SystemCleaner.exe> |
 
 单文件 EXE，不需要安装 Python 或运行库，拷贝到哪都能跑。
