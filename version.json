@@ -1,9 +1,9 @@
 {
-  "version": "1.2.2",
-  "date": "2026-10-31",
-  "notes": "修复升级时不停弹出 ping 黑窗口、升完版本仍是旧版的问题：升级改为进程内直接替换（当前 EXE 改名 .old → 新文件写到原路径 → 启动新程序），0.1 秒完成，不再依赖批处理、不再弹窗等待。注意：v1.2.0 / v1.2.1 自带的升级器本身有缺陷，换不掉自己，如果你用的是这两个版本，请手动下载 v1.2.2 覆盖一次；从 v1.2.2 起自动升级恢复正常。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe",
-  "size": 17706937,
-  "sha256": "84bf2d1c4e19540d936d86f28136359ed4b84f87a80c69a637fac316bd18eb61"
+  "version": "1.2.3",
+  "date": "2026-11-01",
+  "notes": "彻底不再出现任何黑色命令行窗口：删除升级用的批处理兜底方案，替换全程在程序内部完成，ipconfig / dism / powercfg 等子进程也全部加上 CREATE_NO_WINDOW。升级改为「当前 EXE 改名 .old → 新文件写到原路径 → 启动新程序」，0.08 秒完成，必定成功或必定说清原因；同一版本连续装失败后自动检查不再反复弹窗。注意：v1.2.0 / v1.2.1 / v1.2.2 自带的升级器有缺陷，换不掉自己，请手动下载本版覆盖一次；从 v1.2.3 起自动升级恢复正常。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe",
+  "size": 17705261,
+  "sha256": "b1180567f96e1a4896b9500f88716afedaffe15f6030df4b0fe7516b28f8a407"
 }

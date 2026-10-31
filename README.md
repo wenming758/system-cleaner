@@ -46,8 +46,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.2/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe> |
 
 单文件 EXE，不需要安装 Python 或运行库，拷贝到哪都能跑。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -75,6 +75,15 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v1.2.3（2026-11-01）
+- 彻底消除黑窗口：删除升级用的批处理兜底方案，替换全程在程序内部完成；
+  `ipconfig` / `dism` / `powercfg` 等子进程也统一加上 `CREATE_NO_WINDOW`，一个窗口都不会闪
+- 升级必定成功或必定说清原因：当前 EXE 改名 `.old` → 新文件写到原路径 → 按版本号改名 → 启动新程序，
+  实测 0.08 秒；改不动就直接提示「请先关闭其它正在运行的窗口」，不再假装成功
+- 同一版本连续装失败后，自动检查不再反复弹窗；手动「检查更新」仍可再试
+- 升级遗留的 `xxx.exe.old` 下次启动自动清理
+- 产物：`系统清理_v1.2.3.exe`
 
 ### v1.2.2（2026-10-31）
 - 修复：**升级时不停弹出 ping 黑窗口、升完版本还是旧的**。旧升级方式写个 `.bat` 等程序退出再覆盖文件，
