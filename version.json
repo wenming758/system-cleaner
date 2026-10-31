@@ -1,0 +1,9 @@
+{
+  "version": "1.2.0",
+  "date": "2026-10-31",
+  "notes": "「性能与电源」独立成左侧导航页；右上角最小化/最大化/关闭按钮重新设计；检测升级改为 Gitee 主源 + GitHub 镜像双源回退；升级改为覆盖原文件的增量升级，支持 sha256 校验。",
+  "download": "https://gitee.com/wenming760/system-cleaner/raw/master/SystemCleaner.exe",
+  "mirror": "https://raw.githubusercontent.com/wenming758/system-cleaner/main/SystemCleaner.exe",
+  "size": 17698970,
+  "sha256": "6eddedd64aba559d86d960048409f1e6146332ed77194b798c4edc4fee052846"
+}
