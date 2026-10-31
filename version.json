@@ -1,9 +1,9 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "date": "2026-10-31",
-  "notes": "「性能与电源」独立成左侧导航页；右上角最小化/最大化/关闭按钮重新设计；检测升级改为 Gitee 主源 + GitHub 镜像双源回退；升级改为覆盖原文件的增量升级，支持 sha256 校验。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.0/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.0/SystemCleaner.exe",
-  "size": 17698712,
-  "sha256": "b059609b2394d18831017c0702d58984313bd24dba3568e8bcb3307e36039033"
+  "notes": "修复「转移虚拟内存」报错：改为直接写注册表 PagingFiles，不再依赖会报「常规故障」的 WMI 分页文件类；转移前先检测虚拟内存当前所在磁盘，已经不在系统盘时给出提示并阻止无意义的搬移；彻底修复右上角出现两套最小化/最大化/关闭按钮的问题（首帧即无边框，无需刷新）。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.1/SystemCleaner.exe",
+  "size": 17705055,
+  "sha256": "fabee85d6f4d688dc39076e91b57e35ea91c25b80711cb0f7bcdfd6a56c461e4"
 }
