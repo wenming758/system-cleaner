@@ -1,8 +1,9 @@
 # 系统清理 · System Cleaner 🧹
 
 绿色卡通风格的 **Windows 10 / 11 垃圾清理工具**，单文件 EXE、免安装、无广告、不联网。
+**一个 32 位 EXE 通吃 Win10 / Win11 的 32 位与 64 位系统。**
 
-![主图](screenshots/00_主图.png)
+![主图](screenshots/01_首页.png)
 
 C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更新残留、崩溃转储这些"电子灰尘"扫干净。
 
@@ -12,7 +13,7 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 ### 🧹 一键清理
 - 点「开始扫描」先看能清多少，再点「一键清理」
-- 16 类系统垃圾，按 **推荐 / 可选 / 谨慎** 三档分级
+- 17 类系统垃圾，按 **推荐 / 可选 / 谨慎** 三档分级
 - 一键清理只动「推荐」项：回收站、Windows.old 这类"删了就回不来"的永远要你自己勾
 
 ### 💽 磁盘选择
@@ -40,16 +41,22 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 - 半透明、圆角可开关；无系统灰色边框，标题栏按钮自绘
 - 后台线程扫描 / 清理，界面不卡死
 
+### 🪟 系统兼容
+- **32 位单文件，32/64 位通用**：一个 EXE 覆盖 Windows 10 / 11 的两种系统架构
+- 自动识别系统版本（如 Windows 11 24H2），Win11 用 DWM 系统圆角 + 无色边框 + 深色标题栏，Win10 自动降级
+- 任务栏图标按程序 ID 分组，Win11 固定到任务栏也不丢图标
+- 新增「系统升级残留 `$Windows.~BT`」清理项，升级 Win11 后能多释放数 GB
+
 ---
 
 ## 📥 下载
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe> |
 
-单文件 EXE，不需要安装 Python 或运行库，拷贝到哪都能跑。
+单文件 32 位 EXE（约 10 MB），不需要安装 Python 或运行库，拷贝到哪都能跑；32 位 / 64 位 Windows 10 / 11 都直接可用。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
 
 ---
@@ -75,6 +82,14 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v1.3.0（2026-11-01）
+- **统一为 32 位单文件版本**：同一个 EXE 跑在 Windows 10 / 11 的 32 位与 64 位系统上，不再分包
+- **Windows 11 自动适配**：自动识别 `Windows 11 24H2 / 23H2 / 22H2` 等版本，Win11 使用 DWM 系统圆角、无色边框、深色标题栏；Win10 自动降级为区域圆角
+- 界面顶部与「关于」页显示系统版本、程序位数与系统位数
+- 任务栏图标按程序 ID 分组，Win11 固定到任务栏后图标不再空白
+- 新增「系统升级残留 `$Windows.~BT`」清理项（谨慎级，默认不勾），升级 Win11 后通常可多释放数 GB
+- 产物：`系统清理_v1.3.0.exe`
 
 ### v1.2.3（2026-11-01）
 - 彻底消除黑窗口：删除升级用的批处理兜底方案，替换全程在程序内部完成；

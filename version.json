@@ -1,9 +1,9 @@
 {
-  "version": "1.2.3",
+  "version": "1.3.0",
   "date": "2026-11-01",
-  "notes": "彻底不再出现任何黑色命令行窗口：删除升级用的批处理兜底方案，替换全程在程序内部完成，ipconfig / dism / powercfg 等子进程也全部加上 CREATE_NO_WINDOW。升级改为「当前 EXE 改名 .old → 新文件写到原路径 → 启动新程序」，0.08 秒完成，必定成功或必定说清原因；同一版本连续装失败后自动检查不再反复弹窗。注意：v1.2.0 / v1.2.1 / v1.2.2 自带的升级器有缺陷，换不掉自己，请手动下载本版覆盖一次；从 v1.2.3 起自动升级恢复正常。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.2.3/SystemCleaner.exe",
-  "size": 17705261,
-  "sha256": "b1180567f96e1a4896b9500f88716afedaffe15f6030df4b0fe7516b28f8a407"
+  "notes": "统一为 32 位单文件版本：Windows 10 / 11 的 32 位与 64 位系统共用同一个 EXE，不用再区分版本。新增 Windows 11 自动识别与适配（DWM 圆角、无色边框、深色标题栏，标题栏显示 24H2 / 23H2 等版本），新增「系统升级残留 $Windows.~BT」清理项，任务栏图标按程序 ID 分组。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe",
+  "size": 9963888,
+  "sha256": "6f54d1bdc8f5646b928c3ec7fb502a99aa3f0a6b22e9d35ddee3f82ad5b64db9"
 }
