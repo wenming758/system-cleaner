@@ -1,9 +1,9 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "date": "2026-11-01",
-  "notes": "统一为 32 位单文件版本：Windows 10 / 11 的 32 位与 64 位系统共用同一个 EXE，不用再区分版本。新增 Windows 11 自动识别与适配（DWM 圆角、无色边框、深色标题栏，标题栏显示 24H2 / 23H2 等版本），新增「系统升级残留 $Windows.~BT」清理项，任务栏图标按程序 ID 分组。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe",
-  "size": 9963888,
-  "sha256": "6f54d1bdc8f5646b928c3ec7fb502a99aa3f0a6b22e9d35ddee3f82ad5b64db9"
+  "notes": "修复 32 位版本系统标题栏重新出现的问题，标题与版本徽标移入绿色主题头部；系统垃圾从 17 类扩充到 33 类，按过期文件 / 系统相关 / 缓存文件 / 应用程序 / 临时文件 / 隐私分组，新增微信与企业微信缓存清理；新增「启动项管理」页，扫描注册表启动项与启动文件夹，勾选即启用、取消即禁用，禁用项可随时恢复。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.4.0/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.4.0/SystemCleaner.exe",
+  "size": 9993533,
+  "sha256": "d63b9321aedaab00611470e8adeb3a5ba00a906165ca5df9e70ad58f659b7b8a"
 }

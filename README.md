@@ -13,8 +13,24 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 ### 🧹 一键清理
 - 点「开始扫描」先看能清多少，再点「一键清理」
-- 17 类系统垃圾，按 **推荐 / 可选 / 谨慎** 三档分级
+- **33 类系统垃圾**，按 **过期文件 / 系统相关 / 缓存文件 / 应用程序 / 临时文件 / 隐私** 六组显示
+- 每类按 **推荐 / 可选 / 谨慎** 三档分级
 - 一键清理只动「推荐」项：回收站、Windows.old 这类"删了就回不来"的永远要你自己勾
+
+### 🧼 系统垃圾明细（v1.4.0 扩充到 33 类）
+- 过期文件：被取代的 WinSxS 组件（DISM 按需清理）、Chrome / WPS 老版本备份、Windows.old、`$Windows.~BT`
+- 系统相关：Windows 事件日志、Windows 更新安装记录、损坏的 Appx 应用包、系统还原点、零售演示离线内容
+- 缓存文件：浏览器缓存、网页缓存、缩略图缓存、着色器缓存、WinINet Cookies、远程桌面缓存、.NET 程序集缓存、**微信 / 企业微信缓存**（新版 `xwechat_files` 也认）
+- 应用程序：Package Cache 安装包缓存
+- 临时文件：WinSxS 临时文件、Windows 日志、用户 / 系统临时文件、QQ / TIM 临时数据、回收站、崩溃 dmp、微软拼音无用文件
+- 破坏性操作（DISM 清理组件、清事件日志、删还原点、删 Appx）都会先弹确认，删 Appx 前还要求系统里至少有 15 个应用包
+
+### 🚀 启动项管理（v1.4.0 新增）
+- 自动扫描 **当前用户 + 所有用户** 两条注册表 Run 键（含 32 位视图）和两个启动文件夹
+- 每条显示名称、启动命令、来源、当前状态，**勾选即启用、取消即禁用**
+- 禁用不删除任何东西：注册表项备份到 `HKCU\Software\SystemCleaner\StartupDisabled`，
+  启动文件夹里的文件挪到 `%APPDATA%\SystemCleaner\StartupDisabled`，随时勾回来即恢复
+- 支持「全部启用 / 全部禁用」，HKLM（所有用户）项需要管理员权限
 
 ### 💽 磁盘选择
 - 想清哪个盘就勾哪个盘，扫描和清理只针对所选磁盘
@@ -38,14 +54,14 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 ### 🎨 界面
 - 绿色卡通主题 + 圆角卡片 + 胶囊按钮 + 彩色 emoji
-- 半透明、圆角可开关；无系统灰色边框，标题栏按钮自绘
+- 半透明、圆角可开关；**全程无边框**，标题直接放在主题头部里，最小化 / 最大化 / 关闭按钮自绘
 - 后台线程扫描 / 清理，界面不卡死
 
 ### 🪟 系统兼容
 - **32 位单文件，32/64 位通用**：一个 EXE 覆盖 Windows 10 / 11 的两种系统架构
 - 自动识别系统版本（如 Windows 11 24H2），Win11 用 DWM 系统圆角 + 无色边框 + 深色标题栏，Win10 自动降级
+- 32 位系统缺少 `SetWindowLongPtrW` / `GetWindowLongPtrW`，v1.4.0 已补上 32 位回退，**32 位 EXE 同样没有系统标题栏**
 - 任务栏图标按程序 ID 分组，Win11 固定到任务栏也不丢图标
-- 新增「系统升级残留 `$Windows.~BT`」清理项，升级 Win11 后能多释放数 GB
 
 ---
 
@@ -53,8 +69,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.3.0/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.4.0/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.4.0/SystemCleaner.exe> |
 
 单文件 32 位 EXE（约 10 MB），不需要安装 Python 或运行库，拷贝到哪都能跑；32 位 / 64 位 Windows 10 / 11 都直接可用。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -71,19 +87,32 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 |---|---|
 | ![系统垃圾](screenshots/03_系统垃圾.png) | ![空文件夹](screenshots/04_空文件夹.png) |
 
-| 性能与电源（v1.2.0 独立成页） | 设置 |
+| 启动项管理（v1.4.0 新增） | 性能与电源 |
 |---|---|
-| ![性能与电源](screenshots/05_性能与电源.png) | ![设置](screenshots/06_设置.png) |
+| ![启动项管理](screenshots/05_启动项管理.png) | ![性能与电源](screenshots/06_性能与电源.png) |
 
-| 窗口按钮悬停 | 关闭按钮悬停 |
+| 清理记录 | 设置 |
 |---|---|
-| ![窗口按钮](screenshots/07_窗口按钮.png) | ![关闭按钮](screenshots/08_关闭按钮悬停.png) |
+| ![清理记录](screenshots/07_清理记录.png) | ![设置](screenshots/08_设置.png) |
 
 ---
 
 ## 📝 更新日志
 
-### v1.3.0（2026-11-01）
+### v1.4.0（2026-11-01）
+- 🐛 **修复 32 位版本标题栏又冒出来**：32 位 `user32.dll` 没有 `SetWindowLongPtrW` / `GetWindowLongPtrW`，
+  摘除 `WS_CAPTION` 的无边框逻辑直接失败。v1.4.0 补上 `SetWindowLongW` 回退（含指针符号转换），
+  **标题移进主题头部**，程序名 + 版本徽标 + 系统信息全在绿色卡片里，系统灰色标题栏彻底消失
+- 🧼 **系统垃圾从 17 类扩到 33 类**，按六组显示：过期文件 / 系统相关 / 缓存文件 / 应用程序 / 临时文件 / 隐私
+  - 过期文件：被取代的 WinSxS 组件（DISM 按需清理）、Chrome 老版本备份、WPS 老版本备份
+  - 系统相关：Windows 事件日志、Windows 更新安装记录、损坏的 Appx、系统还原点、零售演示离线内容
+  - 缓存文件：Windows 下载缓存、终端服务器缓存、.NET 程序集缓存、WinINet Cookies、微信缓存 等
+  - 应用程序：Package Cache；临时文件：WinSxS 临时文件、Windows 日志、QQ 临时数据、微软拼音无用文件 等
+- 💬 **新增微信 / 企业微信缓存清理**：同时识别旧版 `WeChat Files` 与新版 `xwechat_files`（含 `cache` / `temp`）
+- 🚀 **新增「启动项管理」页**：扫描注册表 Run 键（当前用户 + 所有用户，含 32 位视图）与启动文件夹，
+  **勾选即启用、取消即禁用**，禁用项备份到注册表和 `%APPDATA%\SystemCleaner\StartupDisabled`，随时勾回即恢复
+- 🛡 破坏性清理全部加确认与保护：DISM / 事件日志 / 还原点 / Appx 走独立处理，Appx 少于 15 个时拒绝删除
+- 产物：`系统清理_v1.4.0.exe`
 - **统一为 32 位单文件版本**：同一个 EXE 跑在 Windows 10 / 11 的 32 位与 64 位系统上，不再分包
 - **Windows 11 自动适配**：自动识别 `Windows 11 24H2 / 23H2 / 22H2` 等版本，Win11 使用 DWM 系统圆角、无色边框、深色标题栏；Win10 自动降级为区域圆角
 - 界面顶部与「关于」页显示系统版本、程序位数与系统位数
