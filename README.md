@@ -82,8 +82,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.1/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.5.1/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.2/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.5.2/SystemCleaner.exe> |
 
 单文件 32 位 EXE（约 10 MB），不需要安装 Python 或运行库，拷贝到哪都能跑；32 位 / 64 位 Windows 10 / 11 都直接可用。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -100,7 +100,7 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 |---|---|
 | ![系统垃圾](screenshots/03_系统垃圾.png) | ![空文件夹](screenshots/04_空文件夹.png) |
 
-| 启动项管理 | 鼠标右键管理（v1.5.1 新界面） |
+| 启动项管理 | 鼠标右键管理（彩色程序图标） |
 |---|---|
 | ![启动项管理](screenshots/05_启动项管理.png) | ![鼠标右键管理](screenshots/06_鼠标右键.png) |
 
@@ -115,6 +115,12 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v1.5.2（2026-11-02）
+- 🌈 **全程序彩色图标**：导航、按钮、页头、状态栏、列表、对话框的 emoji 全部改为内嵌真彩色 PNG（Tk 默认只画黑白字形）
+- 🖱 **列表使用程序自己的图标**：鼠标右键菜单项与启动项直接提取对应程序 / DLL 的真实彩色图标，本机 123 项中 122 项可解析
+- 🔲 **窗口圆角真正生效**：同时裁剪 Tk 包装窗口与绘制子窗口，Win10 / Win11 四角都透出桌面；最大化自动直角，还原后恢复圆角
+- 🏷️ 产物：`系统清理_v1.5.2.exe`
 
 ### v1.5.1（2026-11-02）
 - 🖱 **鼠标右键管理改成分类导航 + 开关列表**：左侧 14 个分类（全部 / 文件 / 所有对象 / 文件夹 / 目录背景 / 桌面背景 / 磁盘分区 / 图片 / 文档 / 音视频 / 压缩包 / 程序 / 发送到 / Win+X），右侧每行带绿色胶囊开关
