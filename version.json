@@ -1,9 +1,9 @@
 {
-  "version": "1.5.0",
+  "version": "1.5.1",
   "date": "2026-11-02",
-  "notes": "新增「鼠标右键」管理页：扫描文件、图片、文档、音视频、压缩包、程序、文件夹、桌面、驱动器的右键菜单，勾选即启用、取消即禁用，禁用不删除并整棵备份，随时可恢复；版本号后新增每日彩色 emoji 祝福短句（30 条按日期轮换，真彩色图标，背景不变）；升级改为直接覆盖原主程序，文件名不变、不新增快捷方式，原快捷方式打开就是新版本。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.0/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.5.0/SystemCleaner.exe",
-  "size": 10089132,
-  "sha256": "f54cfbb832090af6c2dce042dd29ebc253d2c72150ef908afd27740ead257ca7"
+  "notes": "鼠标右键管理全新界面：左侧分类导航（全部/文件/所有对象/文件夹/目录背景/桌面背景/磁盘分区/图片/文档/音视频/压缩包/程序/发送到/Win+X），右侧开关列表一点即启用或禁用；行尾齿轮查看命令与注册表位置并支持复制；新增「新建一个菜单项目」与自建项永久删除；底部状态栏显示当前分类。禁用仍然只备份不删除，随时可恢复。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.1/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.5.1/SystemCleaner.exe",
+  "size": 10120632,
+  "sha256": "43b6b6547b179bc944289560926fb53c1cef77ff5665446fdb43836def87eb2d"
 }
