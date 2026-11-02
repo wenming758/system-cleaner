@@ -82,8 +82,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.2/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.5.2/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.3/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v1.5.3/SystemCleaner.exe> |
 
 单文件 32 位 EXE（约 10 MB），不需要安装 Python 或运行库，拷贝到哪都能跑；32 位 / 64 位 Windows 10 / 11 都直接可用。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -115,6 +115,11 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v1.5.3（2026-11-02）
+- 🐛 **彻底去掉重复的窗口按钮**：拦截系统样式变更并在映射 / 最大化 / 还原后自动复查，原生标题栏和右上角第二套最小化 / 最大化 / 关闭不会再出现
+- 🧭 **动作按钮回到各自页面**：“开始扫描 / 一键清理”不再常驻顶栏；首页、磁盘页、系统垃圾页各自显示本页按钮，设置等页面不再出现无关按钮
+- 🏷️ 主程序文件名固定为 `系统清理.exe`，升级直接覆盖，不再生成带版本号的新文件
 
 ### v1.5.2（2026-11-02）
 - 🌈 **全程序彩色图标**：导航、按钮、页头、状态栏、列表、对话框的 emoji 全部改为内嵌真彩色 PNG（Tk 默认只画黑白字形）

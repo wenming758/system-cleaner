@@ -1,9 +1,9 @@
 {
-  "version": "1.5.2",
+  "version": "1.5.3",
   "date": "2026-11-02",
-  "notes": "全程序彩色图标：导航、按钮、页头、状态栏、列表、对话框的 emoji 全部改为内嵌真彩色 PNG；鼠标右键菜单项与启动项直接使用对应程序 / DLL 的真实彩色图标（本机 123 项中 122 项可解析）；窗口圆角真正生效：同时裁剪 Tk 包装窗口与绘制子窗口，Win10 / Win11 四角都透出桌面，最大化自动直角、还原后恢复圆角。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.2/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.5.2/SystemCleaner.exe",
-  "size": 10360519,
-  "sha256": "d57746eae8b226fb5e247d22571c10841a882f27384f3875c944bd18a76efcb7"
+  "notes": "彻底去掉重复窗口按钮：拦截系统样式变更并在映射 / 最大化 / 还原后自动复查，原生标题栏与右上角第二套最小化 / 最大化 / 关闭不会再出现；开始扫描 / 一键清理不再常驻顶栏，改为首页、磁盘页、系统垃圾页就地显示，设置等页面不再出现无关按钮；主程序文件名固定为 系统清理.exe，升级直接覆盖原程序。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v1.5.3/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v1.5.3/SystemCleaner.exe",
+  "size": 10360513,
+  "sha256": "db11d6101fd25b8e757f5c061ccff6b28f0abef46884ca8091a9e4f01fea6e35"
 }
