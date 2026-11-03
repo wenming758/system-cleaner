@@ -109,8 +109,8 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 
 | 来源 | 地址 |
 |---|---|
-| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v2.0.1/SystemCleaner.exe> |
-| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v2.0.1/SystemCleaner.exe> |
+| Gitee（更新源） | <https://gitee.com/wenming760/system-cleaner/releases/download/v2.0.2/SystemCleaner.exe> |
+| GitHub | <https://github.com/wenming758/system-cleaner/releases/download/v2.0.2/SystemCleaner.exe> |
 
 单文件 32 位 EXE（约 12 MB），不需要安装 Python 或运行库，拷贝到哪都能跑；32 位 / 64 位 Windows 10 / 11 都直接可用。
 右键「以管理员身份运行」体验最完整（清 Windows 更新缓存、系统日志需要管理员权限）。
@@ -142,6 +142,14 @@ C 盘又红了？点几下就能把临时文件、浏览器缓存、Windows 更�
 ---
 
 ## 📝 更新日志
+
+### v2.0.2（2026-11-03）
+- ⚡ **新增首页「快速清理」**：一键清临时文件、网页缓存、Cookie、最近记录与系统盘零散垃圾；系统垃圾页新增同名类别
+- 🎛 **首页按钮调整**：快速清理 / 推荐清理 / 深度清理 / 扫空文件夹；窗口变窄自动换行、等宽铺满，随窗口伸缩
+- 🚀 **深度清理一键到底**：扫描完成后自动全选并直接弹出确认框，不用再手动全选、再点清理
+- 🖼 **弹窗背景统一**：确认 / 提示弹窗改用与主界面相同的卡通插画背景
+- 🧭 左侧导航移除「空文件夹」，改由首页「扫空文件夹」选择磁盘后开始扫描
+- 🔲 全部按钮统一圆角，鼠标悬停变实心红
 
 ### v2.0.1（2026-11-02）
 - ➕ 右上角新增「检查更新」，更新源固定 Gitee，检查更快

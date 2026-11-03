@@ -1,9 +1,9 @@
 {
-  "version": "2.0.1",
-  "date": "2026-11-02",
-  "notes": "大版本更新：正式更名为「万象系统优化」，主程序文件名为 万象系统优化.exe。新增拖拽添加程序：把 exe / 快捷方式 / 程序文件夹直接拖进窗口，自动分析并加入列表；新增程序卸载页（真实图标、体积与安装日期排序、卸载后自动检查注册表与文件残留）；右上角新增「检查更新」，更新源固定 Gitee，检查更快；修复拖拽后程序闪退；修复弹窗被主窗口遮挡后无法操作（所有弹窗始终位于主窗口之上，主窗口不置顶）；窗口四边四角可自由缩放；补全 EXE 版本与著作信息（作者：万象乱谈），修正任务管理器程序图标。",
-  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v2.0.1/SystemCleaner.exe",
-  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v2.0.1/SystemCleaner.exe",
-  "size": 12411026,
-  "sha256": "09d9bce2fd62b58b6fcbb272df801cc0c0166305048e82a80ac7ae656e29fb94"
+  "version": "2.0.2",
+  "date": "2026-11-03",
+  "notes": "新增首页「快速清理」一键清理临时文件与网页缓存，新增「快速清理」垃圾类别；首页按钮调整为 快速清理 / 推荐清理 / 深度清理 / 扫空文件夹，并随窗口宽度自适应换行；深度清理扫描完成后自动全选并直接弹出确认框；清理确认弹窗改用卡通背景，长列表可滚动、按钮置顶；全部按钮统一圆角、悬停红色；左侧导航移除空文件夹入口，改由首页「扫空文件夹」选择磁盘后开始扫描。",
+  "download": "https://gitee.com/wenming760/system-cleaner/releases/download/v2.0.2/SystemCleaner.exe",
+  "mirror": "https://github.com/wenming758/system-cleaner/releases/download/v2.0.2/SystemCleaner.exe",
+  "size": 12419170,
+  "sha256": "7086a019a6a9cc35060eb8eaa780fd39aece0466c43a3ab5c4a3e746d29c3b08"
 }
